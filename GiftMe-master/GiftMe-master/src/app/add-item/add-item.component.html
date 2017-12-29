@@ -1,0 +1,19 @@
+<div>
+Name: <input type="text" [(ngModel)]="item.name" placeholder="Item Name">
+<br>
+Description: <input type="text" [(ngModel)]="item.description" placeholder="Item Description">
+<br>
+Price:<input type="text" [(ngModel)]="item.price" placeholder="Item Price">
+<br>
+Photo link: <input type="text" [(ngModel)]="item.photo" placeholder="Item Photo link">
+<br>
+Quantity: <input type="text" [(ngModel)]="item.quantity" placeholder="Item quantity">
+<br>
+Category:<input type="text" [(ngModel)]="item.category" placeholder="Item category">
+<br>
+<button (click)="addItem()">Add Item</button>
+<br>
+{{message}}
+<button class="btn btn-success" (click)="goBack()">Go back</button>
+</div>
+

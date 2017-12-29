@@ -1,0 +1,23 @@
+<div id="search-component">
+  <h4>User Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let profile of profiles | async">
+      <a (click)="add(profile)">
+        {{profile.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="shared_profs">
+  <ul class="decorator">
+    <li *ngFor="let prof of shared_profs">
+      <span class="badge">{{prof.userId}}</span> {{prof.name}}<br>
+      <button class="delete" title="remove user" (click)="delete(prof)">x</button><br>
+    </li>
+  </ul>
+  <!-- <button (click)="sendMessage()">Set Users</button> -->
+</div>

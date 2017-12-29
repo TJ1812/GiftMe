@@ -1,0 +1,50 @@
+<div>
+    <div style="border-right:1px solid black; width:45%;float:left;">
+      <div style="width:50%;margin:auto;">
+        <label>Login</label>
+        <br>
+        <input type="text" [(ngModel)]="login.email" placeholder="Email" required/>
+        <br>
+        <input type="password" [(ngModel)]="login.password" placeholder="Password" required/>
+        <br>
+        <button (click)="loginUser()">Login</button>
+        {{login["message"]}}
+      </div>
+      <div style="width:50%;margin:auto;">
+        <a (click)="changeShow()">Forget Password?</a>
+        <br>
+        <div *ngIf="show">
+          <input type="text" [(ngModel)]="login.email" placeholder="Email" required/>
+          <br>
+          <input type="password" [(ngModel)]="login.answer" placeholder="Your secret answer(mother's maiden name)" required/>
+          <br>
+          <button (click)="loginUser()">Login with this</button>
+          <br>
+          {{login["message"]}}
+        </div>
+      </div>
+    </div>
+  
+  
+    <div style="width:30%;float:left;">
+      <div style="width:70%;margin:auto;">
+        <label>SignUp</label>
+        <br>
+        <input type="text" [(ngModel)]="signup.name" placeholder="Name" required />
+        <br>
+        <input type="text" [(ngModel)]="signup.email" placeholder="Email" required />
+        <br>
+        <input type="password" [(ngModel)]="signup.password" placeholder="Password" required />
+        <br>
+        <input type="text" [(ngModel)]="signup.address" placeholder="Address" required />
+        <br>
+        <input type="text" [(ngModel)]="signup.phone" placeholder="Phone" required />
+        <br>
+        <input type="text" [(ngModel)]="signup.answer" placeholder="Your mother's maiden name?" required />
+        <br>
+        <button (click)="signUpUser(0)">SignUp</button>
+        <br>
+        {{signup["message"]}}
+      </div>
+    </div>
+  </div>

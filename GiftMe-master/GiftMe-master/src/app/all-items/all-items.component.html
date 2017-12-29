@@ -1,0 +1,9 @@
+<div *ngIf="items">
+    <li *ngFor="let item of items">
+        <a routerLink="/item/{{item.itemId}}">
+            {{item.name}} {{item.category}}
+        </a>
+    </li>
+</div>
+
+<button class="btn btn-success" (click)="goBack()">Go back</button>

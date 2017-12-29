@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="jaxrs-jersey-rest">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="jersey-servlet-1.19.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-servlet-1.19/jersey-servlet-1.19">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="asm-3.3.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/asm-3.3.1/asm-3.3.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-core-1.19.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-core-1.19/jersey-core-1.19">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-20140107.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/json-20140107/json-20140107">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr311-api-1.1.1.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jsr311-api-1.1.1/jsr311-api-1.1.1">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-bundle-1.19.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-bundle-1.19/jersey-bundle-1.19">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-server-1.19.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/jersey-server-1.19/jersey-server-1.19">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="jaxrs-jersey-rest"/>
+        <property name="java-output-path" value="/jaxrs-jersey-rest/build/classes"/>
+    </wb-module>
+</project-modules>

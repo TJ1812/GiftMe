@@ -1,0 +1,24 @@
+<div id="search-component">
+  <h4>Item Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let item of items | async">
+      <!-- <a routerLink="/item/{{item.itemId}}"> -->
+        <a (click)="add(item)">
+        {{item.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="shared_items">
+  <ul class="decorator">
+    <li *ngFor="let item of shared_items">
+      <span class="badge">{{item.itemId}}</span> {{item.name}}<br>
+      <button class="delete" title="remove item" (click)="delete(item)">x</button><br>
+    </li>
+  </ul>
+<!-- <button (click)="sendMessage()">Set Items</button> -->
+</div>

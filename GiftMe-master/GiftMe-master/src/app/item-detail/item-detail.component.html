@@ -1,0 +1,24 @@
+Item Detail
+<br> <br> <br>
+<div *ngIf="item">
+    
+    <label>Name:</label> {{item.name}}
+    <br>
+    <label>Description:</label> {{item.description}}
+    <br>
+    <label>Category:</label> {{item.category}}
+    <br>
+    <label>Price:</label> {{item.price}}
+    <br>
+    <label>Quantity:</label> {{item.quantity}}
+    <br>
+    <label>Photo:</label> {{item.photo}}
+    <br>
+</div>
+
+<div *ngIf="show">
+        <button class="btn btn-success" (click)="delete()">Delete Item</button>    
+</div>
+
+    
+<button class="btn btn-success" (click)="goBack()">Go back</button>

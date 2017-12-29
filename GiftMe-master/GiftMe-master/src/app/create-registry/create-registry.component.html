@@ -1,0 +1,17 @@
+<div>
+    <label> Create Registry: </label>
+    <input class="form-control" type="text" [(ngModel)]="registry.name" placeholder="Registry Name" />
+    <br>
+    <label> Registry type: </label>
+    <input type="radio" [(ngModel)]="registry.showPublic" name="sharingType" [value]="true"> Public
+    <input type="radio" [(ngModel)]="registry.showPublic" name="sharingType" [value]="false"> Private
+    <br>
+
+    <div *ngIf="!registry.showPublic">
+        <user-search (messageEvent)="receiveMessageFromUserSearch($event)"></user-search>
+    </div>
+    <br>
+    <item-search (messageEvent)="receiveMessageFromItemSearch($event)"></item-search>
+
+    <button (click)="createRegistry()">Create</button>
+</div>

@@ -1,0 +1,21 @@
+<label> Registries shared with me</label>
+<hr />
+
+<div class="decorator" *ngIf="registry_names">
+    <li *ngFor="let regi_name of registry_names">
+        <span class="badge" (click)="getItemsForRegistry(regi_name.registryId)">Expand</span> {{regi_name["name"]}}
+    </li>
+</div>
+
+<hr />
+<div class="decorator" *ngIf="item_names">
+    <label> Items in selected registry:</label>
+    <br />
+    <li *ngFor="let item_name of item_names">
+        <span class="badge">{{item_name.name}}</span> 
+        <button (click)="assignItemToMe(item_name.itemId)">Assign to Me </button>
+    </li>
+    {{message}}
+    <hr />
+</div>
+<button class="btn btn-success" (click)="goBack()">Go back</button>
